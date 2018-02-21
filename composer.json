@@ -1,8 +1,14 @@
 {
     "name": "vichaunter/chartjs",
+    "version": "0.0.1",
     "description": "PHP package to parse raw data into ChartJS",
     "license": "MIT",
     "keywords": ["php","chartjs","vichaunter"],
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vichaunter/php-chartjs.git"
+    },
+    "homepage": "https://www.vichaunter.org",
     "authors": [
         {
             "name": "VicHaunter",
