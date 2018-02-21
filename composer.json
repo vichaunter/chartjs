@@ -1,0 +1,21 @@
+{
+    "name": "vichaunter/chartjs",
+    "description": "PHP package to parse raw data into ChartJS",
+    "license": "MIT",
+    "keywords": ["php","chartjs","vichaunter"],
+    "authors": [
+        {
+            "name": "VicHaunter",
+            "email": "vichaunter@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "VicHaunter\\ChartJS\\": "src"
+        }
+    }
+}
