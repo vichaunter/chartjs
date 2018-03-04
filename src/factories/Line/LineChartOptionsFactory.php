@@ -23,35 +23,19 @@ class LineChartOptionsFactory extends ChartCommonOptionsFactory {
         'hoverBorderColor',
         'hoverBorderWidth'
     ];
-//    type
-//    data
-//        labels []
-//        datasets []
-//            label
-//            backgroundColor []
-//            data []
-//    options []
-//        legend []
-//            display
-//        title []
-//            display
-//            text
-    
-    
-    private $options = [];
     
     
     /**
      * SET OPTIONS
      */
     
-    public function setBegintAtZero($xAxis = true,$yAxis = true){
-        $this->options['scales']['xAxes'][]['ticks']['beginAtZero'] = $xAxis;
-        $this->options['scales']['yAxes'][]['ticks']['beginAtZero'] = $yAxis;
+    public function setBegintAtZero($xAxis = false,$yAxis = false){
+        if($xAxis) $this->xAxisBeginAtZero = $xAxis;
+        if($yAxis) $this->yAxisBeginAtZero = $yAxis;
     }
 
     public function setLegendDisplay($value){
-        $this->options['legend']['display'] = $value;
+        $this->legendDisplay = $value;
     }
     
 //    public function addLegend($display = true, $position = 'top', $fullWidth = true, $reverse = false, $onClick = null, $onHover = null){

@@ -47,7 +47,7 @@ class ChartFactory {
         $this->htmlMode = $set;
     }
     
-    public function getJsFileUrl( $custom = null, $loadBundle = true, $html = false ) {
+    public function getJsFileUrl( $html = false, $custom = null, $loadBundle = true ) {
         $url = null;
         if ($custom) {
             $url = $custom;
@@ -73,7 +73,7 @@ class ChartFactory {
         
         $code['type'] = $this->type;
         $code['data'] = $this->data;
-        if($this->options) $code['options'] = $this->options;
+        $code['options'] = $this->options;
         
         return json_encode($code);
     }
@@ -109,14 +109,14 @@ class ChartFactory {
         return $this->getHtmlCanvas()."\n".$this->getHtmlScript($tags);
     }
     
-    public function addOption( $name, $values){
-        $setOption = 'set'.ucfirst($name);
-        if(method_exists($this->options, $setOption)) {
-            $this->options->$setOption($values);
-        }else{
-            throw new \ChartJSOptionsException("Option {$name} not exists");
-        }
-    }
+//    public function addOption( $name, $values){
+//        $setOption = 'set'.ucfirst($name);
+//        if(method_exists($this->options, $setOption)) {
+//            $this->options->$setOption($values);
+//        }else{
+//            throw new \ChartJSOptionsException("Option {$name} not exists");
+//        }
+//    }
 
 
 //    public function setDataLabels(array $labels){

@@ -23,4 +23,9 @@ class BarChartFactory extends ChartFactory {
         /** @var $this->data BarChartDataFactory */
         return $this->data;
     }
+    
+    public function getOptions(){
+        /** @var $this->options BarChartOptionsFactory */
+        return $this->options;
+    }
 }
