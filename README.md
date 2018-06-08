@@ -22,10 +22,10 @@ Then you will generate the chart:
         $barChartData = $barChart->getData();
 //        $barChartOptions = $barChart->getOptions(); // you can configure colors, sizes, etc.
     
-        foreach($statsByDate as $day){
-           $barChartData->newDataset()
-                        ->setLabel($date['day'])
-                        ->addData($date['total']);
+        $barChartDataset = $barChartData->newDataset();
+        foreach($statsByDay as $day){
+            $barChartData->addLabel($day['date']);
+            $barChartDataset->setLabel('Label for legend for this dataset color')->addData($day['total']);
         }
         
         $barChartHtmlCanvas = $barChart->getHtmlCanvas();
