@@ -10,7 +10,7 @@ First of all is needed load the js file from cdn, for this you can retrieve like
 ````
 Load at the end of page, before other chart scripts
 
-<script src="{$chartJS}"></script>
+<script src="{$jsUrl}"></script>
 
 NOTE: you can getJsFileUrl from any new XXXChart(); if you don't need to load from another file in template.
 
